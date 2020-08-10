@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="hu-hu">
+    <head>
+        <meta charset="utf-8">
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="css.css" type="text/css">
+        <link rel="stylesheet" href="animate.css" type="text/css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        
+        
+
+
+        <script src="script.js" type="text/javascript"></script>
+       
+    </head>
+    <body onload="startTime()">
+        
+        <div class="container">
+
+            
+            <div id="showhide">
+                
+            <div id="heal">
+
+            <div id="boxHeal"></div>    
+            <img id="heart" src="heart.png"></img>
+            
+            </div>
+            <div></div>
+            
+            <div id="hunger">
+                <div id="boxHunger"></div>
+                <img id="huge" src="eat.png"></img>
+            </div>
+            <div id="thirst">
+                <div id="boxThirst"></div>
+            </div>
+            
+            <div id="armor">
+                <div id="boxArmor"></div>
+                <img id="armo" src="armor.png"></img>
+            </div>
+			<div id="oxygen">
+                <div id="boxOxygen"></div>
+                <img id="stami" src="lightning.png"></img>
+            </div>
+			<div id="water">
+                <div id="boxWater"></div>
+
+
+               
+
+
+               
+                
+            
+                <div  class = "field" id = "job"><span id="name"></span> - <span id="grade"></span></div>
+                <div>
+
+                </div>
+                <div class = "field" id = "cash">
+                </div>
+                <span  id="HUF">HUF</span>
+               
+
+<div class="oxygen animated option">
+
+
+
+    
+
+    <div id="oxy">
+        <div id="boxOxy" ></div>
+       </div>
+
+   
+
+</div>
+
+                
+             
+    
+<div id="divid" style="visibility: visible;" >ID:</div>
+<div id="ID" style="visibility: visible;"></div>
+
+
+
+
+
+
+
+
+<div id="time" style="visibility: visible;">
+
+
+
+</div>
+
+</div>
+
+<script>
+    
+   function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('time').innerHTML =
+  h + ":" + m;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+
+$(function() {
+        $("#ref").click(function() {
+            animate(".demo", 'bounce');
+            return false;
+        });
+    });
+     
+    function animate(element_ID, animation) {
+        $(element_ID).addClass(animation);
+        var wait = window.setTimeout( function(){
+            $(element_ID).removeClass(animation)}, 1300
+        );
+    }
+
+</script>
+
+
+                    
+        </div>
+        </div>
+
+
+
+
+
+
+
+    </body>
+</html>
